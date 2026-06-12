@@ -1,13 +1,11 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-DATABASE_URL = (
-    "mysql+pymysql://root:Aakash%402910@localhost/ai_resume_screener"
-)
+DATABASE_URL = "sqlite:///ats.db"
 
 engine = create_engine(
     DATABASE_URL,
-    echo=True
+    connect_args={"check_same_thread": False}
 )
 
 SessionLocal = sessionmaker(

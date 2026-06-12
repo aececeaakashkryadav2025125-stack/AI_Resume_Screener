@@ -6,6 +6,7 @@ def calculate_match_score(
     resume_text,
     jd_text
 ):
+
     documents = [
         resume_text,
         jd_text
