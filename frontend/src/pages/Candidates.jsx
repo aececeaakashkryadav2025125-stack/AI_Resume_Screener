@@ -29,12 +29,15 @@ function Candidates() {
     return matchesSearch && matchesFilter;
   });
 
-  const downloadExcel = () => {
-    window.open(
-      "http://127.0.0.1:8000/export/excel",
-      "_blank"
-    );
-  };
+  const API_URL =
+  "https://ai-resume-screener-f0g1.onrender.com";
+
+const downloadExcel = () => {
+  window.open(
+    `${API_URL}/export/excel`,
+    "_blank"
+  );
+};
 
   const exportPDF = () => {
     const doc = new jsPDF();
